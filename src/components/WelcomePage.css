@@ -1,11 +1,13 @@
 
 .stars_image{
     position: relative;
+    background-color: black;
+    width: 100%;
     
 }
 
 .content{
-    background-color: black;
+    
     position: absolute;
     top:0;
     width: 100%;

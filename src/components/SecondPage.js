@@ -3,7 +3,7 @@ import './SecondPage.css';
 import Previous from '../img/Previous.png';
 import Next from '../img/Next.png';
 
-function SecondPage() {
+function SecondPage(props) {
   return (
     <Fragment>
         <div className='Wrapper'>
@@ -25,7 +25,7 @@ function SecondPage() {
                     </div>
                 </form>
                 <footer className='nav'>
-                    <img src={Previous} alt="previous" className='Previous'/>
+                    <img onClick={props.BackFirstPage} src={Previous} alt="previous" className='Previous'/>
                     <div className='bullet'></div>
                     <div className='bullet_main'></div>
                     <div className='bullet'></div>
