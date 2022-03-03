@@ -1,0 +1,155 @@
+.Wrapper{
+    display: flex;
+    height: 1080px;
+
+    
+}
+
+.left_section{
+    width: 50%;
+    background-color: white;
+}
+.right_section{
+    width: 50%;
+    background-color: black;
+}
+input{
+    
+    width: 455px;
+    height: 54px;
+    border: 1px solid #525557;
+
+    
+    box-sizing: border-box;
+    margin-top: 37px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+   
+    
+}
+select{
+    width: 455px;
+    height: 54px;
+    padding-left: 57px;
+    padding-top:17px;
+    box-sizing: border-box;
+    margin-top: 37px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    border: 1px solid #525557;
+
+
+}
+
+form{
+    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+}
+.bullet{
+    width: 19px;
+    height: 19px;
+    background: #FE3B1F;
+    opacity: 0.1;   
+    border-radius: 100%;
+    margin-right:15px;
+}
+.bullet_main{
+    width: 19px;
+    height: 19px;
+    background: #FE3B1F; 
+    border-radius: 100%;
+    margin-right:15px;
+
+}
+.nav{
+
+    display: flex;
+    
+    
+   
+}
+.Previous{
+    margin-right:18px;
+    padding-left: 308px;
+
+}
+.Next{
+    margin-left: 3px;
+}
+
+.left_title{
+        margin-top:131px;
+        text-align: center;
+        font-family: Rowdies;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        color:#FE3B1F;
+        text-transform: capitalize;
+        
+}
+.prog_language{
+    width: 201px;
+    height: 32px;
+    background: #FE3B1F;
+    margin-top:22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color:white;
+    border: none;
+}
+.button_div{
+    width: 455px;
+    display: flex;
+    justify-content: right;
+}
+
+.right_title{
+    margin-top:131px;
+    text-align: center;
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    color:#FE3B1F;
+    text-transform: capitalize;
+     
+}
+.right_p{
+    width: 705px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 200%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF; 
+    
+}
+.skill_box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+    width: 455px;
+    align-items: center;
+}
+
+
+.skill{
+    margin-top: 17px;
+    width: 447px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #525557;
+    box-sizing: border-box;
+}
