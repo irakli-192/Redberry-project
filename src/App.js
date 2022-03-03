@@ -1,10 +1,16 @@
 import React from 'react'
-import WelcomePage from './WelcomePage';
+import WelcomePage from './components/WelcomePage';
+import FirstPage from './components/firstPage';
+
 
 function App() {
 
   return(
-    <WelcomePage/>
+    <div>
+      {/* <WelcomePage/> */}
+      <FirstPage/>
+    
+    </div>
   )
 }
 

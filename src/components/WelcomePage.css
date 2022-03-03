@@ -1,14 +1,11 @@
-body{
-    background-color: black;
- 
-    
-}
+
 .stars_image{
     position: relative;
     
 }
 
 .content{
+    background-color: black;
     position: absolute;
     top:0;
     width: 100%;
@@ -21,15 +18,20 @@ body{
     font-style: normal;
     font-weight: normal;
     font-size: 96px;
-    line-height: 119px;
+   
     color: #FE3B1F;
     text-transform: capitalize;
-    /* margin-left: 434px; */
+   
     text-align: center;
     margin-top:175px;
     
 
 
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .start_button{
     width: 395px;
