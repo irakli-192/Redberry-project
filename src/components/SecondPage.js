@@ -4,6 +4,7 @@ import Previous from '../img/Previous.png';
 import Next from '../img/Next.png';
 
 function SecondPage(props) {
+    
   return (
     <Fragment>
         <div className='Wrapper'>
@@ -52,4 +53,4 @@ function SecondPage(props) {
   )
 }
 
-export default SecondPage
+export default SecondPage;
