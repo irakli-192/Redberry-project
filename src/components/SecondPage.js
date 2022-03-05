@@ -11,10 +11,12 @@ function SecondPage(props) {
             <div className='left_section'>
                 <h1 className='left_title'>Tell us about your skills</h1>
                 <form>
-                    <select>
-                        <option selected disable>skills</option>
-                        <option>asd</option>
-                        <option>asd</option>
+                    <select defaultValue="skills">
+                        {props.skills.map(item=>{
+                            return(
+                                <option key={item.id}>{item.title}</option>
+                            )
+                        })}
                     </select>
                     <input type="text" placeholder="Experience Duration in Years"/>
                     <div className='button_div'>

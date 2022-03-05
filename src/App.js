@@ -1,10 +1,20 @@
-import React,{Fragment,useState} from 'react'
+import React,{Fragment,useState,useEffect} from 'react'
 import WelcomePage from './components/WelcomePage';
 import FirstPage from './components/firstPage';
 import SecondPage from './components/SecondPage';
 
 
 function App() {
+  const a=1;
+  const [skills,setSkills]=useState([]);
+  useEffect(()=>{
+    fetch('https://bootcamp-2022.devtest.ge/api/skills').then(response=>{
+      return response.json();
+    }).then(data=>{
+      setSkills(data);
+    })
+  },[a])
+
   const [nameChangeHandler,setNameChangeHandler]=useState('');
   const [lastNameChangeHandler,setLastNameChangeHandler]=useState('');
   const [emailChangeHandler,setEmailChangeHandler]=useState('');
@@ -58,6 +68,7 @@ function App() {
     (numberChangeHandler.length===0||(telRegex.test(numberChangeHandler)&&validNumber.length==13))){
       setIsFirstPage(false);
       setIsSecondPage(true);
+      console.log(skills);
     }
     if(nameChangeHandler.trim().length<2){
       setNameError(true);
@@ -85,7 +96,6 @@ function App() {
   const BackFirstPage=()=>{
     setIsSecondPage(false);
     setIsFirstPage(true);
-
   }
 
 return(
@@ -109,7 +119,12 @@ return(
       errorObj={errorObj}
       
     />}
-    {IsSecondPage&&<SecondPage BackFirstPage={BackFirstPage}/>}
+    {IsSecondPage&&<SecondPage 
+      BackFirstPage={BackFirstPage}
+      skills={skills}
+      
+    />}
+    
   
   </Fragment>
 )
