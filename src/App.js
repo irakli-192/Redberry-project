@@ -26,12 +26,17 @@ function App() {
   const numberChange=(event)=>{
       setnumberChangeHandler(event.target.value);
   }
+  let errorObj={
+    name:"The field must contain at least 2 characters",
+    lastname:"The field must contain at least 2 characters",
+    email:"Email is not valid",
+    phone:"Phone number is not valid"
+  }
   
-  
-  // const[nameError,setNameError]=useState(false);
-  // const[lastNameError,setLastNameError]=useState(false);
-  // const[emailError,setEmailError]=useState(false);
-  // const[phoneError,setPhoneError]=useState(false);
+  const[nameError,setNameError]=useState(false);
+  const[lastNameError,setLastNameError]=useState(false);
+  const[emailError,setEmailError]=useState(false);
+  const[phoneError,setPhoneError]=useState(false);
 
 
   const[IsWelcomePage,setIsWelcomePage]=useState(true);
@@ -50,13 +55,32 @@ function App() {
     if(nameChangeHandler.trim().length>=2&&
     lastNameChangeHandler.trim().length>=2&&
     regex.test(emailChangeHandler)&&emailChangeHandler.trim().length>0&&
-    telRegex.test(numberChangeHandler)&&validNumber.length==13){
+    (numberChangeHandler.length===0||(telRegex.test(numberChangeHandler)&&validNumber.length==13))){
       setIsFirstPage(false);
       setIsSecondPage(true);
     }
-    // if(nameChangeHandler.trim().length>=2){
-    //   setNameError(true);
-    // }
+    if(nameChangeHandler.trim().length<2){
+      setNameError(true);
+    }else{
+      setNameError(false);
+    }
+    if(lastNameChangeHandler.trim().length<2){
+      setLastNameError(true);
+    }else{
+      setLastNameError(false);
+    }
+    if(!regex.test(emailChangeHandler)){
+      setEmailError(true)
+    }else{
+      setEmailError(false);
+    }
+    if(numberChangeHandler.length>0&&
+      (!telRegex.test(numberChangeHandler)||validNumber.length!==13)){
+      setPhoneError(true);
+    }else{
+      setPhoneError(false);
+    }
+
   }
   const BackFirstPage=()=>{
     setIsSecondPage(false);
@@ -78,8 +102,11 @@ return(
       lastNameChangeHandler={lastNameChangeHandler}
       emailChangeHandler={emailChangeHandler}
       numberChangeHandler={numberChangeHandler}
-      // errorName={nameError}
-      // errorLastName={lastNameError}
+      errorName={nameError}
+      errorLastName={lastNameError}
+      errorEmail={emailError}
+      errorNumber={phoneError}
+      errorObj={errorObj}
       
     />}
     {IsSecondPage&&<SecondPage BackFirstPage={BackFirstPage}/>}

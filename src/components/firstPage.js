@@ -2,6 +2,7 @@ import React,{Fragment,useState} from 'react';
 import './firstPage.css';
 import Previous from '../img/Previous.png';
 import Next from '../img/Next.png';
+import Error from './Error';
 
 function FirstPage(props) {
     
@@ -12,14 +13,13 @@ function FirstPage(props) {
                 <h1 className='title'>hey, rocketeer, what are your coordinates?</h1>
                 <form>
                     <input type="text" placeholder='Name' value={props.nameChangeHandler} onChange={props.nameChange}/>
-                    <p className='require'>The field must contain at least 2 characters</p>
+                    {props.errorName&&<Error error={props.errorObj.name}/>}        
                     <input type="text" placeholder='Last Name' value={props.lastNameChangeHandler} onChange={props.lastNameChange}/>
-                    <p className='require'>The field must contain at least 2 characters</p>
+                    {props.errorLastName&&<Error error={props.errorObj.lastname}/>}
                     <input type="email" placeholder='Email' value={props.emailChangeHandler} onChange={props.emailChange} />
-                    <p className='require'>Email is not valid</p>
+                    {props.errorEmail&&<Error error={props.errorObj.email}/>}
                     <input type="text" placeholder='+995_ _ _ _' value={props.numberChangeHandler} onChange={props.numberChange}/>  
-                    <p className='require'>phone number is not valid</p> 
-                    
+                    {props.errorNumber&&<Error error={props.errorObj.phone}/>}                  
                 </form>
                 <footer>
 
