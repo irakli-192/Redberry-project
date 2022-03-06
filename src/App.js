@@ -2,6 +2,7 @@ import React,{Fragment,useState,useEffect} from 'react'
 import WelcomePage from './components/WelcomePage';
 import FirstPage from './components/firstPage';
 import SecondPage from './components/SecondPage';
+import ThirdPage from './components/ThirdPage/ThirdPage';
 
 
 function App() {
@@ -99,7 +100,7 @@ function App() {
 
 return(
   <Fragment>
-    {IsWelcomePage&&<WelcomePage GoFirstPage={GoFirstPage}/>}
+    {/* {IsWelcomePage&&<WelcomePage GoFirstPage={GoFirstPage}/>}
     {IsFirstPage&&<FirstPage 
       BackWelcomePage={BackWelcomePage} 
       GoSecondPage={GoSecondPage} 
@@ -122,8 +123,8 @@ return(
       BackFirstPage={BackFirstPage}
       skills={skills}
       
-    />}
-    
+    />} */}
+    <ThirdPage/>
   
   </Fragment>
 )
