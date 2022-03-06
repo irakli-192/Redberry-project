@@ -1,6 +1,6 @@
 .Wrapper{
     display: flex;
-    height: 1080px;
+    
 
     
 }
@@ -8,6 +8,7 @@
 .left_section{
     width: 50%;
     background-color: white;
+    height: 100%;
 }
 .right_section{
     width: 50%;
@@ -50,6 +51,7 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 140px;
+    
 }
 .bullet{
     width: 19px;
@@ -70,6 +72,8 @@ form{
 .nav{
 
     display: flex;
+    
+    margin-bottom: 157px;
     
     
    
@@ -152,4 +156,15 @@ form{
     background: #FFFFFF;
     border: 1px solid #525557;
     box-sizing: border-box;
+    font-family: Montserrat;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: space-between;
+    padding-left: 17px;
+    padding-right: 14px;
+
 }

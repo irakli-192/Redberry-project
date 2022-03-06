@@ -29,7 +29,7 @@ function FirstPage(props) {
                     <div className='bullet'></div>
                     <div className='bullet'></div>
                     <div className='bullet'></div>
-                    <img onClick={props.GoSecondPage} src={Next} alt="Next" className='Next'/>
+                    <img onClick={props.GoSecondPage} src={Next} alt="Next" className='Next'/>                    
                 </footer>
                 
             </div>

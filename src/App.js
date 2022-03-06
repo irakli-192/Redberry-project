@@ -5,7 +5,7 @@ import SecondPage from './components/SecondPage';
 
 
 function App() {
-  const a=1;
+  const depend=true;
   const [skills,setSkills]=useState([]);
   useEffect(()=>{
     fetch('https://bootcamp-2022.devtest.ge/api/skills').then(response=>{
@@ -13,7 +13,7 @@ function App() {
     }).then(data=>{
       setSkills(data);
     })
-  },[a])
+  },[depend])
 
   const [nameChangeHandler,setNameChangeHandler]=useState('');
   const [lastNameChangeHandler,setLastNameChangeHandler]=useState('');
@@ -68,7 +68,6 @@ function App() {
     (numberChangeHandler.length===0||(telRegex.test(numberChangeHandler)&&validNumber.length==13))){
       setIsFirstPage(false);
       setIsSecondPage(true);
-      console.log(skills);
     }
     if(nameChangeHandler.trim().length<2){
       setNameError(true);
