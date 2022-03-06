@@ -4,7 +4,20 @@ import Next from '../../img/Next.png';
 import './ThirdPageFooter.css';
 
 
-function ThirdPageFooter() {
+function ThirdPageFooter(props) {
+  const nextPage=()=>{
+    let a=0;
+    let arr=Object.entries(props.state);
+    arr.map(item=>{
+        if(item[1].length>0){
+          a++;
+        }
+        if(a===5){
+          console.log(props.state);
+        }
+      })
+      
+  }
   return (
     <Fragment>
          <footer className='Third_Footer'>
@@ -14,7 +27,7 @@ function ThirdPageFooter() {
             <div className='bullet_main'></div>
             <div className='bullet'></div>
             <div className='bullet'></div>
-            <img src={Next} alt="Next" className='Third_Next'/>                    
+            <img onClick={nextPage} src={Next} alt="Next" className='Third_Next'/>                    
         </footer>
     </Fragment>
   )
