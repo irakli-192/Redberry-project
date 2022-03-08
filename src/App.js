@@ -3,11 +3,10 @@ import WelcomePage from './components/WelcomePage';
 import FirstPage from './components/firstPage';
 import SecondPage from './components/SecondPage';
 import ThirdPage from './components/ThirdPage/ThirdPage';
+import FourthPage from './components/ThirdPage/FourthPage/FourthPage';
 
 
-// let skillsCount=0;
-//   let id=0;
-//   let valid=0;
+
 function App() {
   
   const depend=true;
@@ -138,18 +137,14 @@ return(
       GoThirdPage={GoThirdPage}
       BackFirstPage={BackFirstPage}
       skills={skills}
-      // clickButton={clickButton}
-      // chosenSkill={chosenSkill}
-      // changeSkills={changeSkills}
-      // removeChosenSkill={removeChosenSkill}
-      // expChange={expChange}
       
       
     />}
     {IsThirdPage&&<ThirdPage 
       BackSecondPage={BackSecondPage}
     />}
-  
+    <FourthPage/>
+    
   </Fragment>
 )
 }

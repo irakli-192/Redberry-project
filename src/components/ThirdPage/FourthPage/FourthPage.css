@@ -1,0 +1,63 @@
+.leftSide{
+    width: 50%;
+    padding-left: 153px;
+    box-sizing: border-box;
+}
+.leftSide_title{
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    color: #FE3B1F;
+    margin-top: 43px;
+}
+.Devtalks{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    
+}
+.Wrapper_Fourth{
+    display: flex; 
+   
+}
+.Questionnaire{
+    margin-top:127px;
+}
+.textarea1{
+    margin-top:11px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid #525557;
+    width: 535px;
+    height: 122px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+}
+.textarea2{
+    margin-top:11px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid #525557;
+    width: 535px;
+    height: 89px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+
+}
+
+.Question3{
+    margin-top:33px
+}
+.textarea_title1{
+    margin-top:45px;
+}
