@@ -18,8 +18,9 @@ function reducer(state,action){
             return state;
     }
 }
-
-function ThirdPageForm() {
+let third_appear=false;
+let five_appear=false;
+function ThirdPageForm(props) {
     const[state,dispatch]=useReducer(reducer,{first:'',second:'',third:'',fourth:'',five:''})
     
     const First_Change=event=>{
@@ -27,19 +28,30 @@ function ThirdPageForm() {
     }
     const Second_Change=event=>{
         dispatch({type:'Second_Question',payload:event.target.id})
+        if(event.target.id=="Yes"){
+            third_appear=true;
+        }else{
+            third_appear=false;
+        }
     }
     const Third_Change=event=>{
         dispatch({type:'Third_Question',payload:event.target.value})
     }
     const Fourth_Change=event=>{
         dispatch({type:'Fourth_Question',payload:event.target.id})
+        if(event.target.id=="Yes"){
+            five_appear=true;
+        }else{
+            five_appear=false;
+        }
     }
     const Five_Change=event=>{
         dispatch({type:'Five_Question',payload:event.target.value})
     }
+    
   return (
     <Fragment>
-        <form>
+        <form >
             <div className='Question'>
                 <h3 className='First_Question_Title'>how would you prefer to work?</h3>
                 <div>
@@ -66,10 +78,10 @@ function ThirdPageForm() {
                     <label className='Third_Label' htmlFor='No'>No</label>  
                 </div>
             </div>
-            <div className='Question'>
+            {third_appear&&<div className='Question'>
                 <h3>When</h3>
                 <input onChange={Third_Change} className='Date_Input' type='date'/>
-            </div>
+            </div>}
             <div className='Question'>
                 <h3>Have you been vaccinated?</h3>
                 <div>
@@ -81,11 +93,11 @@ function ThirdPageForm() {
                     <label className='Third_Label' htmlFor='No'>No</label>  
                 </div>
             </div>
-            <div className='Question'>
+            {five_appear&&<div className='Question'>
                 <h3>When did you get your last covid vaccine?</h3>
                 <input onChange={Five_Change} className='Date_Input' type='date'/>
-            </div>
-            <ThirdPageFooter state={state}/>
+            </div>}
+            <ThirdPageFooter BackSecondPage={props.BackSecondPage} state={state} third_appear={third_appear} five_appear={five_appear}/>
         </form>
     </Fragment>
   )

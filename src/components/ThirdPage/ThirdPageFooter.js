@@ -5,23 +5,29 @@ import './ThirdPageFooter.css';
 
 
 function ThirdPageFooter(props) {
+ 
+  
   const nextPage=()=>{
-    let a=0;
+    let sum=0;
     let arr=Object.entries(props.state);
     arr.map(item=>{
         if(item[1].length>0){
-          a++;
-        }
-        if(a===5){
-          console.log(props.state);
+          sum++;
         }
       })
+      if(sum===5){
+        console.log(props.state);
+      }else if(!props.third_appear&&!props.five_appear&&sum===3){
+        console.log(props.state);
+      }else if((props.third_appear||props.five_appear)&&sum===4){
+        console.log(props.state);
+      }
       
   }
   return (
     <Fragment>
          <footer className='Third_Footer'>
-            <img  src={Previous} alt="previous" className='Third_Previous'/>
+            <img onClick={props.BackSecondPage} src={Previous} alt="previous" className='Third_Previous'/>
             <div className='bullet_main'></div>
             <div className='bullet_main'></div>
             <div className='bullet_main'></div>

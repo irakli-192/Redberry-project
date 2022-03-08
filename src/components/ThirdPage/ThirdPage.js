@@ -2,13 +2,13 @@ import React,{Fragment} from 'react';
 import ThirdPageForm from './ThirdPageForm';
 import './ThirdPage.css'
 
-function ThirdPage() {
+function ThirdPage(props) {
   return (
     <Fragment>
       <div className="Wrapp">
           <div className='left'>
             <h1 className='Third_Page_Title'>Covid Stuff</h1>
-            <ThirdPageForm/>
+            <ThirdPageForm BackSecondPage={props.BackSecondPage}/>
           </div>
           <div className='right'>
             <h1 className='Right_Title'>Redberry Covid Policies</h1>

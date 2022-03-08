@@ -5,7 +5,11 @@ import SecondPage from './components/SecondPage';
 import ThirdPage from './components/ThirdPage/ThirdPage';
 
 
+// let skillsCount=0;
+//   let id=0;
+//   let valid=0;
 function App() {
+  
   const depend=true;
   const [skills,setSkills]=useState([]);
   useEffect(()=>{
@@ -53,6 +57,7 @@ function App() {
   const[IsWelcomePage,setIsWelcomePage]=useState(true);
   const[IsFirstPage,setIsFirstPage]=useState(false);
   const[IsSecondPage,setIsSecondPage]=useState(false);
+  const[IsThirdPage,setIsThirdPage]=useState(false);
   
   const GoFirstPage=()=>{
     setIsWelcomePage(false);
@@ -98,9 +103,19 @@ function App() {
     setIsFirstPage(true);
   }
 
+  const GoThirdPage=()=>{
+    setIsSecondPage(false);
+    setIsThirdPage(true);
+  }
+  const BackSecondPage=()=>{
+    setIsThirdPage(false);
+    setIsSecondPage(true);
+  }
+ 
+  
 return(
   <Fragment>
-    {/* {IsWelcomePage&&<WelcomePage GoFirstPage={GoFirstPage}/>}
+    {IsWelcomePage&&<WelcomePage GoFirstPage={GoFirstPage}/>}
     {IsFirstPage&&<FirstPage 
       BackWelcomePage={BackWelcomePage} 
       GoSecondPage={GoSecondPage} 
@@ -120,11 +135,20 @@ return(
       
     />}
     {IsSecondPage&&<SecondPage 
+      GoThirdPage={GoThirdPage}
       BackFirstPage={BackFirstPage}
       skills={skills}
+      // clickButton={clickButton}
+      // chosenSkill={chosenSkill}
+      // changeSkills={changeSkills}
+      // removeChosenSkill={removeChosenSkill}
+      // expChange={expChange}
       
-    />} */}
-    <ThirdPage/>
+      
+    />}
+    {IsThirdPage&&<ThirdPage 
+      BackSecondPage={BackSecondPage}
+    />}
   
   </Fragment>
 )

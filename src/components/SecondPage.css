@@ -1,8 +1,5 @@
 .Wrapper{
-    display: flex;
-    
-
-    
+    display: flex;   
 }
 
 .left_section{
@@ -10,10 +7,7 @@
     background-color: white;
     height: 100%;
 }
-.right_section{
-    width: 50%;
-    background-color: black;
-}
+
 input{
     
     width: 455px;
@@ -51,6 +45,7 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 140px;
+   
     
 }
 .bullet{
@@ -118,34 +113,15 @@ form{
     justify-content: right;
 }
 
-.right_title{
-    margin-top:131px;
-    text-align: center;
-    font-family: Rowdies;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 64px;
-    color:#FE3B1F;
-    text-transform: capitalize;
-     
-}
-.right_p{
-    width: 705px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 200%;
-    letter-spacing: 0.05em;
-    color: #FFFFFF; 
-    
-}
+
+
 .skill_box{
     display: flex;
     flex-direction: column;
     margin-top: 39px;
     width: 455px;
     align-items: center;
+    
 }
 
 

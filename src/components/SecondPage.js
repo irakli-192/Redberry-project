@@ -3,7 +3,9 @@ import './SecondPage.css';
 import Previous from '../img/Previous.png';
 import Next from '../img/Next.png';
 import Remove from '../img/Remove.png';
+import RightSide from './RightSide';
 
+let skillsCount=0;
 let id=0;
 let valid=0;
 function SecondPage(props) {
@@ -11,6 +13,7 @@ function SecondPage(props) {
     const[skillsArray,setSkillsArray]=useState([]);
     const[chosenSkill,setChosenSkill]=useState("skills");
     const[expChange,setExpChange]=useState('');
+    const[skillsCount,setSkillsCount]=useState(false);
     
     const changeSkills=(event)=>{
         setChosenSkill(event.target.value);
@@ -18,6 +21,8 @@ function SecondPage(props) {
     const removeChosenSkill=(id)=>{
         const newArray=skillsArray.filter(item=>item.id!==id
         )
+        skillsCount-=1;
+        setSkillsCount(false);
         setSkillsArray(newArray);
     }
 
@@ -41,6 +46,7 @@ function SecondPage(props) {
                 title:"Years of Experience: ",
                 years:expChange
             }])
+            setSkillsCount(true);
             setExpChange('');
         }
     }
@@ -84,21 +90,18 @@ function SecondPage(props) {
                     <div className='bullet'></div>
                     <div className='bullet'></div>
                     <div className='bullet'></div>
-                    <img src={Next} alt="Next" className='Next'/>
+                    <img onClick={skillsCount ? props.GoThirdPage:undefined} src={Next} alt="Next" className='Next'/>
                 </footer>
             </div>
-            <div className='right_section'>
-                <h1 className='right_title'>A bit about our battles</h1>
-                <p className='right_p'>As we said, Redberry has been on the field for quite some 
+            <RightSide title="A bit about our battles">    
+                    As we said, Redberry has been on the field for quite some 
                     time now, and we have touched and embraced a variety of 
                     programming languages, technologies, philosophies, and 
                     frameworks. We are battle-tested in PHP Laravel Stack with 
                     Vue.js, refined in React, and allies with Serverside 
                     technologies like Docker and Kubernetes, and now we have 
                     set foot in the web3 industry.
-                </p>
-
-            </div>
+            </RightSide>
         </div>
     </Fragment>
     

@@ -1,0 +1,25 @@
+.right_section{
+    width: 50%;
+    background-color: black;
+}
+.right_title{
+    margin-top:131px;
+    text-align: center;
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    color:#FE3B1F;
+    text-transform: capitalize;
+     
+}
+.right_p{
+    width: 705px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 200%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF; 
+}
